@@ -12,7 +12,7 @@ public class ApplyForJobStepsPages {
     WebDriverWait wait;
     String positionsName = "Ağırlık ve Denge Mühendisi";
     static String email = "kamilbhrm@gmail.com";
-    static String password = "Kamil.1461";
+    static String password = "***********";
     static By openPositionsMenu = By.xpath("//*[@id=\"navbar-menu\"]/ul/li[2]/a");
     static By getOpenPositions =By.cssSelector("body > div > a > button");
     static By allOpenPositionsButton = By.xpath("//*[@id=\"services\"]/div[3]/div/div/div/a");
@@ -33,21 +33,19 @@ public class ApplyForJobStepsPages {
         this.elementHelper = new ElementHelper(driver);
     }
     public void acikPozisyonlarMenusunaBas() {
-        elementHelper.findElement(openPositionsMenu);
         elementHelper.click(openPositionsMenu);
     }
     public void tumAcikPozisyonlarButonunaBas() {
         elementHelper.click(getOpenPositions);
     }
     public void basvuruAraAlaninaBasVePozisyonIsminiGiriniz() {
-        elementHelper.findElement(positionsNameXPath);
         elementHelper.sendKey(positionsNameXPath,positionsName);
     }
     public void epostaSifreGirVeDogrulamaKutucugunuIsaretle() {
         elementHelper.sendKey(emailXpath,email);
         elementHelper.sendKey(passwordXpath,password);
         elementHelper.click(noRobotCheckBox);
-        elementHelper.setWait(20000);
+        elementHelper.setWait(2000);
 
     }
 

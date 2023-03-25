@@ -17,7 +17,7 @@ public class LoginPages {
     WebDriverWait wait;
     static String email = "kamilbhrm@gmail.com";
     static String accountEmail = "kamilbahram45645@gmail.com";
-    static String password = "Kamil.1461";
+    static String password = "************";
     static By mainGiris = By.xpath("//*[@id=\"home\"]/nav/div/div[1]/ul/li[2]/a");
     static By emailXpath = By.xpath("//*[@id=\"loginForm\"]/div[2]/input");
     static By passwordXpath = By.xpath("//*[@id=\"id_password\"]");

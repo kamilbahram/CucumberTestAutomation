@@ -5,8 +5,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Sleeper;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Clock;
 import java.time.Duration;
 
 public class ElementHelper {
@@ -16,7 +18,7 @@ public class ElementHelper {
 
     public ElementHelper(WebDriver driver){
         this.driver = driver;
-        this.wait = new WebDriverWait(driver,10);
+        this.wait = new WebDriverWait(driver, Clock.systemDefaultZone(), Sleeper.SYSTEM_SLEEPER,10,500L);
         this.action = new Actions(driver);
     }
 
